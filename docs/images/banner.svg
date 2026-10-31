@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="900" height="440" role="img" aria-label="Faultline: break it on purpose, explain it with proof">
+<style>
+.bg{fill:#0b0e14}
+.bar{fill:#141a24}
+.mono,.logo{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"DejaVu Sans Mono","Liberation Mono",monospace}
+.logo{font-size:14px;fill:#e8ecf3;white-space:pre}
+.mono{font-size:13px;white-space:pre}
+.t{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;fill:#7d8799}
+.tag{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;fill:#9aa4b5}
+.k{fill:#ff7a45} .v{fill:#d5dbe6} .r{fill:#ff5d5d;font-weight:700} .d{fill:#6b7587} .g{fill:#3ddc84;font-weight:700} .p{fill:#ff7a45}
+.cover{fill:#0b0e14}
+.node{fill:#141a24;stroke:#2c3646;stroke-width:1.5}
+.nlabel{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;fill:#d5dbe6;text-anchor:middle}
+.wire{stroke:#2c3646;stroke-width:2;stroke-dasharray:4 5}
+.logo-all{animation:fadein 10s infinite}
+@keyframes fadein{0%{opacity:0} 6%,92%{opacity:1} 100%{opacity:0}}
+.right{animation:slip 10s infinite}
+@keyframes slip{0%,15%{transform:translate(0,0)} 16%{transform:translate(5px,11px)} 17%{transform:translate(2px,6px)} 18%{transform:translate(6px,10px)} 19%,84%{transform:translate(4px,9px)} 90%,100%{transform:translate(0,0)}}
+.crack{fill:none;stroke:#ff5d5d;stroke-width:2.5;stroke-linejoin:round;stroke-dasharray:160;animation:crack 10s infinite;filter:drop-shadow(0 0 4px #ff5d5d)}
+@keyframes crack{0%,10%{stroke-dashoffset:160;opacity:1} 16%,84%{stroke-dashoffset:0;opacity:1} 90%,100%{stroke-dashoffset:0;opacity:0}}
+.shake{animation:shake 10s infinite}
+@keyframes shake{0%,15.5%{transform:translate(0,0)} 16%{transform:translate(-3px,1px)} 16.5%{transform:translate(3px,-1px)} 17%{transform:translate(-2px,0)} 17.5%,100%{transform:translate(0,0)}}
+.pulse{fill:#ff7a45;animation:travel 10s infinite;filter:drop-shadow(0 0 5px #ff7a45)}
+@keyframes travel{0%,20%{transform:translateX(0);opacity:0} 21%{opacity:1} 28%{transform:translateX(240px)} 35%{transform:translateX(480px);opacity:1} 36%,100%{transform:translateX(480px);opacity:0}}
+.hot{fill:none;stroke:#ff5d5d;stroke-width:2;opacity:0;animation:hot 10s infinite;filter:drop-shadow(0 0 6px #ff5d5d)}
+@keyframes hot{0%,35%{opacity:0} 37%,90%{opacity:1} 96%,100%{opacity:0}}
+.ln{animation:lines 10s infinite}
+@keyframes lines{0%,92%{opacity:1} 98%,100%{opacity:0}}
+.cv0{animation:cv0 10s infinite} @keyframes cv0{0%,38%{transform:translateX(0)} 44%,99%{transform:translateX(830px)} 100%{transform:translateX(0)}}
+.cv1{animation:cv1 10s infinite} @keyframes cv1{0%,46%{transform:translateX(0)} 52%,99%{transform:translateX(830px)} 100%{transform:translateX(0)}}
+.cv2{animation:cv2 10s infinite} @keyframes cv2{0%,54%{transform:translateX(0)} 60%,99%{transform:translateX(830px)} 100%{transform:translateX(0)}}
+.cv3{animation:cv3 10s infinite} @keyframes cv3{0%,62%{transform:translateX(0)} 70%,99%{transform:translateX(830px)} 100%{transform:translateX(0)}}
+.cv4{animation:cv4 10s infinite} @keyframes cv4{0%,72%{transform:translateX(0)} 78%,99%{transform:translateX(830px)} 100%{transform:translateX(0)}}
+.tagline{animation:tag 10s infinite}
+@keyframes tag{0%,8%{opacity:0} 14%,92%{opacity:1} 100%{opacity:0}}
+</style>
+<defs>
+<clipPath id="left"><polygon points="0,40 378,40 378,56 366,76 386,96 370,116 390,136 374,156 384,176 384,190 0,190"/></clipPath>
+<clipPath id="right"><polygon points="378,40 900,40 900,190 384,190 384,176 374,156 390,136 370,116 386,96 366,76 378,56"/></clipPath>
+</defs>
+<rect class="bg" width="900" height="440" rx="14"/>
+<rect class="bar" width="900" height="32" rx="14"/>
+<rect class="bar" y="18" width="900" height="14"/>
+<circle cx="22" cy="16" r="5.5" fill="#ff5f57"/><circle cx="40" cy="16" r="5.5" fill="#febc2e"/><circle cx="58" cy="16" r="5.5" fill="#28c840"/>
+<text x="450" y="20" class="t" text-anchor="middle">faultline  ::  break it on purpose, explain it with proof</text>
+<g class="shake"><g class="logo-all">
+<g clip-path="url(#left)"><text x="70" y="84" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">███████╗ █████╗ ██╗   ██╗██╗  ████████╗██╗     ██╗███╗   ██╗███████╗</text>
+<text x="70" y="101" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">██╔════╝██╔══██╗██║   ██║██║  ╚══██╔══╝██║     ██║████╗  ██║██╔════╝</text>
+<text x="70" y="118" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">█████╗  ███████║██║   ██║██║     ██║   ██║     ██║██╔██╗ ██║█████╗  </text>
+<text x="70" y="135" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">██╔══╝  ██╔══██║██║   ██║██║     ██║   ██║     ██║██║╚██╗██║██╔══╝  </text>
+<text x="70" y="152" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">██║     ██║  ██║╚██████╔╝███████╗██║   ███████╗██║██║ ╚████║███████╗</text>
+<text x="70" y="169" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝   ╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝</text></g>
+<g clip-path="url(#right)"><g class="right"><text x="70" y="84" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">███████╗ █████╗ ██╗   ██╗██╗  ████████╗██╗     ██╗███╗   ██╗███████╗</text>
+<text x="70" y="101" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">██╔════╝██╔══██╗██║   ██║██║  ╚══██╔══╝██║     ██║████╗  ██║██╔════╝</text>
+<text x="70" y="118" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">█████╗  ███████║██║   ██║██║     ██║   ██║     ██║██╔██╗ ██║█████╗  </text>
+<text x="70" y="135" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">██╔══╝  ██╔══██║██║   ██║██║     ██║   ██║     ██║██║╚██╗██║██╔══╝  </text>
+<text x="70" y="152" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">██║     ██║  ██║╚██████╔╝███████╗██║   ███████╗██║██║ ╚████║███████╗</text>
+<text x="70" y="169" textLength="584.8" lengthAdjust="spacingAndGlyphs" class="logo">╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝   ╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝</text></g></g>
+<polyline class="crack" points="378,56 366,76 386,96 370,116 390,136 374,156 384,176"/>
+</g></g>
+<g class="tagline">
+<text x="690" y="104" class="tag">chaos in.</text>
+<text x="690" y="124" class="tag">telemetry out.</text>
+<text x="690" y="144" class="tag">proof attached.</text>
+</g>
+<line x1="90" y1="238" x2="810" y2="238" class="wire"/>
+<rect x="90" y="220" width="150" height="36" rx="8" class="node"/>
+<rect x="330" y="220" width="150" height="36" rx="8" class="node"/>
+<rect x="570" y="220" width="150" height="36" rx="8" class="node"/>
+<rect x="570" y="220" width="150" height="36" rx="8" class="hot"/>
+<text x="165" y="243" class="nlabel">gateway</text>
+<text x="405" y="243" class="nlabel">orders</text>
+<text x="645" y="243" class="nlabel">payments</text>
+<text x="760" y="243" class="t">postgres</text>
+<circle cx="165" cy="238" r="5" class="pulse"/>
+<g class="ln ln0"><text x="40" y="300" class="mono" xml:space="preserve"><tspan class="p">&#x276F; </tspan><tspan class="k">chaos     </tspan><tspan class="v">injected </tspan><tspan class="r">db_slow</tspan><tspan class="v"> into </tspan><tspan class="r">payments</tspan><tspan class="d">      ground truth sealed</tspan></text><rect class="cover cv0" x="56" y="285" width="820" height="21"/></g><g class="ln ln1"><text x="40" y="324" class="mono" xml:space="preserve"><tspan class="p">&#x276F; </tspan><tspan class="k">observe   </tspan><tspan class="v">prometheus  loki  tempo</tspan><tspan class="d">        412 spans  96 log lines  18 series</tspan></text><rect class="cover cv1" x="56" y="309" width="820" height="21"/></g><g class="ln ln2"><text x="40" y="348" class="mono" xml:space="preserve"><tspan class="p">&#x276F; </tspan><tspan class="k">verdict   </tspan><tspan class="r">payments / db_slow</tspan><tspan class="v">             confidence 0.91</tspan></text><rect class="cover cv2" x="56" y="333" width="820" height="21"/></g><g class="ln ln3"><text x="40" y="372" class="mono" xml:space="preserve"><tspan class="p">&#x276F; </tspan><tspan class="k">evidence  </tspan><tspan class="v">[E4] span 9f2c71a0   [E7] db p95 4 ms to 352 ms   [E9] log line</tspan></text><rect class="cover cv3" x="56" y="357" width="820" height="21"/></g><g class="ln ln4"><text x="40" y="396" class="mono" xml:space="preserve"><tspan class="p">&#x276F; </tspan><tspan class="k">verifier  </tspan><tspan class="v">3 claims checked   0 uncited   0 rejected</tspan><tspan class="g">    MATCH</tspan></text><rect class="cover cv4" x="56" y="381" width="820" height="21"/></g>
+</svg>
