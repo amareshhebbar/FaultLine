@@ -1,0 +1,31 @@
+---
+title: "Services"
+description: "What each service does and what done means."
+icon: "cubes"
+---
+
+<AccordionGroup>
+  <Accordion title="gateway" icon="door-open">
+    The front door. `POST /checkout`, creates an idempotency key if missing, calls orders with retries, maps downstream failures to clear errors.
+
+    **Done:** a checkout returns an order and a payment, and its trace starts here.
+  </Accordion>
+  <Accordion title="orders" icon="receipt">
+    Creates the order and reserves stock with a conditional update. Calls payments with the key `order_<id>`. If the charge fails, marks the order failed and gives the stock back. Later moves to the outbox and queue.
+
+    **Done:** under any retry storm, an order is either paid once or failed with stock returned.
+  </Accordion>
+  <Accordion title="payments" icon="credit-card">
+    Inserts a payment guarded by a unique idempotency key. A repeat returns the original payment, is marked on the span as deduplicated, and is counted in a metric.
+
+    **Done:** 10x redelivery produces zero duplicate charges, checked with SQL.
+  </Accordion>
+  <Accordion title="loadgen" icon="robot">
+    Robot shoppers that send steady traffic. Sends no telemetry of its own.
+
+    **Done:** Grafana shows a flat healthy baseline when no fault is active.
+  </Accordion>
+  <Accordion title="Later: inventory, notifications, ledger" icon="layer-group">
+    Added in Phase 3 to give the fault catalogue more places to hide.
+  </Accordion>
+</AccordionGroup>
