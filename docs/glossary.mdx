@@ -1,0 +1,24 @@
+---
+title: "Glossary"
+description: "Every term in plain words."
+icon: "book"
+---
+
+<AccordionGroup>
+  <Accordion title="Microservice">A small program that does one job and talks to other programs over the network.</Accordion>
+  <Accordion title="Root cause">The one thing that started the problem, as opposed to everything that looks broken because of it.</Accordion>
+  <Accordion title="Chaos engineering">Breaking your own system on purpose, safely, to learn how it fails.</Accordion>
+  <Accordion title="Ground truth">The correct answer, known for certain, used to grade a guess.</Accordion>
+  <Accordion title="Metric">A number measured over time, like requests per second or error rate. Like a car dashboard.</Accordion>
+  <Accordion title="Log">A line of text a service writes when something happens. Like a diary.</Accordion>
+  <Accordion title="Trace and span">A trace is the full journey of one request across services. Each step is a span, with its own ID and timing. Like a parcel tracking page.</Accordion>
+  <Accordion title="p95 latency">95% of requests are faster than this. It shows how slow things feel for the unlucky 5%.</Accordion>
+  <Accordion title="Idempotency key">A unique ticket on a request so doing it twice has the same effect as doing it once. This is what stops a retried payment from charging twice.</Accordion>
+  <Accordion title="Saga">A multi step process where each step can be undone if a later step fails.</Accordion>
+  <Accordion title="Outbox pattern">Saving "send this message" in the same database transaction as the data, so messages are never lost or sent without the data.</Accordion>
+  <Accordion title="Circuit breaker">A switch that stops calling a failing service for a while, so the failure does not spread.</Accordion>
+  <Accordion title="Dead letter queue">A holding area for messages that keep failing, so they do not block everything else.</Accordion>
+  <Accordion title="RAG">Letting an AI look things up in documents before answering, instead of relying on memory.</Accordion>
+  <Accordion title="Hallucination">When an AI states something confidently that is not true.</Accordion>
+  <Accordion title="Top 1 and top 3 accuracy">How often the first guess is right, and how often the right answer is somewhere in the first three guesses.</Accordion>
+</AccordionGroup>
