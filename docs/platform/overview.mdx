@@ -1,0 +1,29 @@
+---
+title: "Platform overview"
+description: "The shop that gets broken on purpose."
+icon: "server"
+---
+
+The platform is a small order and payment backend built the way production systems are built. Its job is to be realistic enough that its failures look like real failures.
+
+## Building blocks
+
+<CardGroup cols={2}>
+  <Card title="Services" icon="cubes">gateway, orders, payments first. inventory, notifications, ledger later.</Card>
+  <Card title="Data" icon="database">Postgres designed for concurrency. Redis cache with a written invalidation strategy.</Card>
+  <Card title="Messaging" icon="envelope">NATS JetStream or Kafka, transactional outbox, sagas, dead letter queues.</Card>
+  <Card title="Resilience" icon="shield">Idempotency keys, retries with backoff and jitter, timeouts, circuit breakers.</Card>
+  <Card title="Telemetry" icon="chart-line">OpenTelemetry traces, structured logs, Prometheus metrics, Grafana LGTM.</Card>
+  <Card title="Delivery" icon="ship">Docker Compose first, then Kubernetes with Helm and GitHub Actions.</Card>
+</CardGroup>
+
+## Contract with the engine
+
+1. Every service sets `service.name` to its folder name
+2. Every log line carries `trace_id` and `span_id`
+3. Faults look like real failures, with no mention of chaos anywhere in telemetry
+4. The chaos API and the `faults` table shape stay stable after Phase 1
+
+## Trade off documents
+
+Each decision with real alternatives gets a short written note in the repo: row locks versus optimistic versioning, NATS versus Kafka, cache invalidation strategy, retry budgets. Interviewers ask about these, so we write them down while the reasons are fresh.
