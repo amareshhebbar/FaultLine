@@ -1,0 +1,32 @@
+---
+title: "Engine overview"
+description: "The AI detective that investigates like an SRE."
+icon: "magnifying-glass"
+---
+
+## One investigation
+
+<Steps>
+  <Step title="Window">Take the incident window and the minutes before it as a baseline.</Step>
+  <Step title="Collect">Query Prometheus, Loki and Tempo. Every finding is saved as evidence with an ID.</Step>
+  <Step title="Rank">Score every `(service, fault kind)` pair from the evidence.</Step>
+  <Step title="Verify">Recheck every cited evidence ID against the live sources.</Step>
+  <Step title="Report">Write a short summary where every sentence cites evidence.</Step>
+</Steps>
+
+## Versions over time
+
+<Tabs>
+  <Tab title="Phase 1: baseline">
+    No LLM. Error ratio, request rate, p95 latency, database p95, error logs, deepest failing span, span with the most self time. This is the number every later version must beat.
+  </Tab>
+  <Tab title="Phase 2: agent">
+    An LLM chooses the next tool call: `query_metrics`, `search_logs`, `search_traces`, `get_trace`. Tool results become evidence before the model sees them. Works with local and hosted models.
+  </Tab>
+  <Tab title="Phase 3: RAG">
+    Extra tools over runbooks, past incidents and the platform source code. Retrieved passages are evidence too.
+  </Tab>
+  <Tab title="Phase 4: fine tuned model">
+    A small open model, fine tuned with LoRA, compresses huge telemetry windows into structured signals before the larger model reasons. Published on HuggingFace with its dataset.
+  </Tab>
+</Tabs>
