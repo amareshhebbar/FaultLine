@@ -1,0 +1,43 @@
+---
+title: "Chaos controller"
+description: "Breaks things on purpose and seals the answer."
+icon: "explosion"
+---
+
+## API
+
+| Method | Path | Purpose |
+| :--- | :--- | :--- |
+| `GET` | `/catalogue` | Fault kinds and which services each can target |
+| `POST` | `/faults` | Start a fault: target, kind, params, duration |
+| `GET` | `/faults/{id}` | Ground truth for one fault |
+| `POST` | `/faults/{id}/stop` | End a fault early |
+
+## Ground truth row
+
+```sql
+faults (
+  id, target, kind, params,
+  started_at, ends_at, stopped_at
+)
+```
+
+## Fault catalogue
+
+| Kind | What happens | Phase |
+| :--- | :--- | :--- |
+| `latency` | A service waits before answering | 1 |
+| `error` | A share of requests fail with 503 | 1 |
+| `crash` | The process dies and restarts in a loop | 2 |
+| `db_slow` | Database calls of one service become slow | 2 |
+| `duplicate` | Payment messages are delivered many times | 2 |
+| `poison_message` | A message that always crashes its consumer | 3 |
+| `network_partition` | Two services cannot reach each other | 3 |
+| `clock_skew` | One service believes it is a different time | 3 |
+| `bad_deploy` | A buggy version goes live | 3 |
+| `cache_stampede` | Cache empties and the database is flooded | 3 |
+| `pool_exhaustion` | Database connections run out | 3 |
+
+<Warning>
+The controller must stay invisible. No telemetry from it, and no log line in any service that says a fault was injected. The only visible signal is the failure itself.
+</Warning>
