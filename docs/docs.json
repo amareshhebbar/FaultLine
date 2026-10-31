@@ -1,0 +1,77 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "maple",
+  "name": "Faultline",
+  "description": "Break a distributed system on purpose, diagnose it with an AI that cites proof, and measure how often it is right.",
+  "colors": {
+    "primary": "#FF7A45",
+    "light": "#FF9A6E",
+    "dark": "#E2572B"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/amareshhebbar/faultline"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "how-it-works",
+              "glossary"
+            ]
+          },
+          {
+            "group": "Platform",
+            "pages": [
+              "platform/overview",
+              "platform/services",
+              "platform/chaos"
+            ]
+          },
+          {
+            "group": "Engine",
+            "pages": [
+              "engine/overview",
+              "engine/verifier",
+              "engine/evaluation"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Project",
+        "groups": [
+          {
+            "group": "Project",
+            "pages": [
+              "roadmap",
+              "results",
+              "contributing"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/amareshhebbar/faultline"
+    }
+  }
+}
