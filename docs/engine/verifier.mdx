@@ -1,0 +1,27 @@
+---
+title: "Verifier"
+description: "No proof, no claim."
+icon: "shield-check"
+---
+
+The verifier is built **before** any LLM, because it is what makes the rest trustworthy.
+
+## Evidence types
+
+| Type | Reference | How it is checked |
+| :--- | :--- | :--- |
+| Metric | PromQL query and timestamp | Run it again, compare the value |
+| Span | Trace ID and span ID | Fetch the trace, confirm the span exists in that service |
+| Log | Service, timestamp, line | Search around that time for the same line |
+| Document | Runbook or code path and passage | Reread the file at that location |
+
+## Rejection rules
+
+* A claim with no citations is rejected
+* A claim citing an unknown ID is rejected
+* A claim with any failed evidence check is rejected
+* A report sentence without a valid `[E12]` style citation is dropped
+
+<Check>
+Target: zero uncited claims in every final report, across every eval run.
+</Check>
