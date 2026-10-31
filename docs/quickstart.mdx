@@ -1,0 +1,41 @@
+---
+title: "Quickstart"
+description: "Get the repo, read the plan, and start Phase 1."
+icon: "rocket"
+---
+
+<Info>
+Faultline is in **Phase 0**. The repository holds the structure, the docs and the plan. Code arrives in Phase 1.
+</Info>
+
+<Steps>
+  <Step title="Clone the repository">
+    ```bash
+    git clone https://github.com/amareshhebbar/faultline.git
+    cd faultline
+    ```
+  </Step>
+  <Step title="Read the plan">
+    Open `ROADMAP.md`. Phase 1 is the only phase you need right now.
+  </Step>
+  <Step title="Pick your side">
+    Platform owners start in `platform/`. AI owners start in `engine/`. Every folder has a README that says what goes there and what done means.
+  </Step>
+  <Step title="Run the docs locally">
+    ```bash
+    npm i -g mint
+    cd docs
+    mint dev
+    ```
+    Then open `http://localhost:3000`.
+  </Step>
+</Steps>
+
+## What Phase 1 will give you
+
+Once Phase 1 lands, this page will hold the real commands. The target experience is:
+
+1. One command starts Postgres, Grafana LGTM, the services, the chaos controller and the load generator
+2. One command injects a fault
+3. One command investigates the last few minutes and prints a cited report
+4. One command runs an eval and prints top 1 and top 3 accuracy
