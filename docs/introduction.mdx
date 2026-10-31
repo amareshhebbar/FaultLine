@@ -1,0 +1,38 @@
+---
+title: "Introduction"
+description: "Break it on purpose. Explain it with proof. Measure how often you are right."
+icon: "bolt"
+---
+
+<img src="/images/banner.svg" alt="Faultline animated banner" />
+
+## What is Faultline?
+
+Car makers crash their own cars into walls on purpose. Because they caused the crash, they know exactly what happened, and they can check whether the airbags worked.
+
+Faultline does this for software. We build a small but real online shop backend, break it on purpose in many ways, and build an AI detective that reads the logs, metrics and traces and explains **what broke, where, and why**, with proof attached to every claim.
+
+Because we caused every incident, we already know the right answer. That lets us give the detective a real score.
+
+<CardGroup cols={2}>
+  <Card title="The platform" icon="server" href="/platform/overview">
+    Order and payment microservices with queues, sagas, idempotency, retries and full telemetry.
+  </Card>
+  <Card title="The chaos controller" icon="explosion" href="/platform/chaos">
+    Injects faults and seals the ground truth where only the scorer can read it.
+  </Card>
+  <Card title="The AI engine" icon="magnifying-glass" href="/engine/overview">
+    Investigates like an SRE, using metrics, logs, traces, runbooks and source code.
+  </Card>
+  <Card title="The verifier" icon="shield-check" href="/engine/verifier">
+    Rechecks every citation. Any claim without proof is deleted.
+  </Card>
+</CardGroup>
+
+## Why it is different
+
+Most AI incident tools cannot tell you how often they are right. Faultline creates its own labelled dataset automatically, one incident at a time, so every result comes with an accuracy number behind it.
+
+<Note>
+The end goal is a sentence like: "Root cause identified correctly in X% of 500 injected incidents, with zero uncited claims." The X is only written down after it is measured.
+</Note>
