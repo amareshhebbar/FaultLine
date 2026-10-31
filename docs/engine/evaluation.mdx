@@ -1,0 +1,29 @@
+---
+title: "Evaluation"
+description: "Turning the detective into a number."
+icon: "chart-simple"
+---
+
+## One run
+
+<Steps>
+  <Step title="Pick">Random target and fault kind from the catalogue, with a fixed seed.</Step>
+  <Step title="Break">Start the fault, wait for it to end, wait a bit more for telemetry.</Step>
+  <Step title="Investigate">Run the detective on the window, verify, write the report.</Step>
+  <Step title="Score">Open the ground truth and compare.</Step>
+</Steps>
+
+## Measures
+
+| Measure | Meaning |
+| :--- | :--- |
+| Top 1 accuracy | First guess names the right service |
+| Top 3 accuracy | Right service is in the first three guesses |
+| Kind accuracy | First guess also names the right fault kind |
+| Time to diagnosis | Seconds from start of investigation to report |
+| Cost | LLM tokens and money per investigation |
+| Uncited claims | Must be zero in final reports |
+
+## Free dataset
+
+Each run also writes a labelled row: signals per service, the true label, and the prediction. After 500 runs that is a public dataset of labelled distributed systems incidents.
